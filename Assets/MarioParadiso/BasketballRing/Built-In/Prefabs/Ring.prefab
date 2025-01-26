@@ -124,12 +124,24 @@ PrefabInstance:
       value: 'Net '
       objectReference: {fileID: 0}
     - target: {fileID: 4058037651045720570, guid: 216411d97f5a68f4a87e27e0d0ade2d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.925607
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058037651045720570, guid: 216411d97f5a68f4a87e27e0d0ade2d7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.925607
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058037651045720570, guid: 216411d97f5a68f4a87e27e0d0ade2d7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.925607
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058037651045720570, guid: 216411d97f5a68f4a87e27e0d0ade2d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.945
       objectReference: {fileID: 0}
     - target: {fileID: 4058037651045720570, guid: 216411d97f5a68f4a87e27e0d0ade2d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.437
+      value: 2.487
       objectReference: {fileID: 0}
     - target: {fileID: 4058037651045720570, guid: 216411d97f5a68f4a87e27e0d0ade2d7, type: 3}
       propertyPath: m_LocalPosition.z

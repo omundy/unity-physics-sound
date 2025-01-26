@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Rim
+  - Net
   layers:
   - Default
   - TransparentFX

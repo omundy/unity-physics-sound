@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3685068711475515023}
   - component: {fileID: 3758736841221124005}
   - component: {fileID: 129255658554995446}
+  - component: {fileID: 2207785851137966446}
   m_Layer: 0
   m_Name: Basketball
   m_TagString: Untagged
@@ -103,13 +104,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada860cc23991436786a8a9a303493f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  prevPlayerPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 3685068711475515023}
-  originalPosition: {x: 0, y: 0, z: 0}
+  resetPos: {x: 0, y: 0, z: 0}
   speed: 1.2
   angle: 45
-  mousePos: {x: 0, y: 0, z: 0}
-  aim: {x: 0, y: 0, z: 0}
-  canShoot: 1
+  grounded: 0
+  shooting: 0
+  mouseScreenPos: {x: 0, y: 0, z: 0}
+  mouseWorldPos: {x: 0, y: 0, z: 0}
+  aimPos: {x: 0, y: 0, z: 0}
+  timer: 0
 --- !u!135 &72301262329459445
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -177,6 +183,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a8a5111d74498488e8dc2ea0b0a81294, type: 3}
   brickClips:
   - {fileID: 8300000, guid: 2f4017e13bacb41f9b055dc30792c009, type: 3}
+  swishClips:
+  - {fileID: 8300000, guid: 27be56787cb0c4c8fb7c2a9d66160060, type: 3}
 --- !u!82 &129255658554995446
 AudioSource:
   m_ObjectHideFlags: 0
@@ -198,8 +206,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 2.92
+  MaxDistance: 23.6
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -234,7 +242,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -274,3 +282,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2207785851137966446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210276607145594948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc904df84558430ab820c226f43f91c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
