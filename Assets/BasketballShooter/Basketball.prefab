@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 2703698656371918517}
   - component: {fileID: 4904776254618921522}
   - component: {fileID: 6477160212443660546}
-  - component: {fileID: 7180275644791934064}
-  - component: {fileID: 72301262329459445}
   - component: {fileID: 3685068711475515023}
+  - component: {fileID: 72301262329459445}
+  - component: {fileID: 7180275644791934064}
   - component: {fileID: 3758736841221124005}
   - component: {fileID: 129255658554995446}
   - component: {fileID: 2207785851137966446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Basketball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,51 +92,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7180275644791934064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6210276607145594948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ada860cc23991436786a8a9a303493f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  prevPlayerPosition: {x: 0, y: 0, z: 0}
-  rb: {fileID: 3685068711475515023}
-  resetPos: {x: 0, y: 0, z: 0}
-  speed: 1.2
-  angle: 45
-  grounded: 0
-  shooting: 0
-  mouseScreenPos: {x: 0, y: 0, z: 0}
-  mouseWorldPos: {x: 0, y: 0, z: 0}
-  aimPos: {x: 0, y: 0, z: 0}
-  timer: 0
---- !u!135 &72301262329459445
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6210276607145594948}
-  m_Material: {fileID: 13400000, guid: bee371219d14140deb20e14fde4c639b, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3685068711475515023
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -164,6 +119,52 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!135 &72301262329459445
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210276607145594948}
+  m_Material: {fileID: 13400000, guid: bee371219d14140deb20e14fde4c639b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7180275644791934064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210276607145594948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada860cc23991436786a8a9a303493f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  rb: {fileID: 3685068711475515023}
+  speed: 1.2
+  angle: 45
+  grounded: 0
+  shooting: 0
+  crowdTriggered: 0
+  highestPos: -1
+  mousePosScreen: {x: 0, y: 0, z: 0}
+  mousePosWorld: {x: 0, y: 0, z: 0}
+  aimPos: {x: 0, y: 0, z: 0}
+  timer: 0
+  drawGizmos: 0
 --- !u!114 &3758736841221124005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +186,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2f4017e13bacb41f9b055dc30792c009, type: 3}
   swishClips:
   - {fileID: 8300000, guid: 27be56787cb0c4c8fb7c2a9d66160060, type: 3}
+  crowd: {fileID: 0}
+  cheer: {fileID: 0}
+  boo: {fileID: 0}
 --- !u!82 &129255658554995446
 AudioSource:
   m_ObjectHideFlags: 0
@@ -209,7 +213,7 @@ AudioSource:
   MinDistance: 2.92
   MaxDistance: 23.6
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
