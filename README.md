@@ -20,3 +20,18 @@ A sample Unity (60000.0.26f1) project that shows...
 - `OnValidate()` to save references on compilation
 
 <img src="_Screenshots/joints.png" width="600px">
+
+
+
+
+## More tutorials
+
+
+- https://blog.terresquall.com/2020/08/unity-rigidbodys-interpolate-property/
+- https://blog.terresquall.com/2019/12/collision-detection-modes-in-unitys-rigidbody-component/
+- https://medium.com/womenintechnology/understanding-unity-hinge-joint-anchor-axies-spring-limits-motor-295bbbafb356
+- Intro to Unity Physics
+	- https://content.marchewitt.com/intro-to-unity-physics-part-1-rigid-body
+	- https://content.marchewitt.com/intro-to-unity-physics-part-2-colliders-and-triggers
+	- https://content.marchewitt.com/intro-to-unity-physics-part-3-physics-materials
+	- https://content.marchewitt.com/intro-to-unity-physics-part-4-joints-and-chain-physics
