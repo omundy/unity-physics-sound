@@ -32,7 +32,7 @@ public class Wiggle : MonoBehaviour
             // only the parent names are unique in the scene
             if (hit.transform.parent.name == transform.parent.name)
             {
-                Debug.Log($"hit.transform.name = {hit.transform.name}");
+                // Debug.Log($"hit.transform.name = {hit.transform.name}");
                 Debug.DrawLine(
                     Camera.main.transform.position,
                     transform.position,
